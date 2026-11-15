@@ -23,7 +23,9 @@ Route::get('/inertia-test', function () {
 
 Route::get('/inertia/index', [InertiaTestController::class, 'index']) ->name('inertia.index');
 //DB保存用
-Route::post('/inertia/index', [InertiaTestController::class, 'store']) ->name('inertia.store');
+Route::post('/inertia', [InertiaTestController::class, 'store']) ->name('inertia.store');
+//form作成用
+Route::get('/inertia/create', [InertiaTestController::class, 'create']) ->name('inertia.create');
 Route::get('/inertia/show/{id}', [InertiaTestController::class, 'show']) ->name('inertia.show');
 
 Route::get('/', function () {
