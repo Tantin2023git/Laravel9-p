@@ -144,6 +144,8 @@ return [
     'attributes' => [
         'email' => 'メールアドレス',
         'password' => 'パスワード',
+        'title' => 'タイトル',
+        'content' => '内容',
     ],
 
 ];
