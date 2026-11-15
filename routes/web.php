@@ -22,6 +22,9 @@ Route::get('/inertia-test', function () {
 });
 
 Route::get('/inertia/index', [InertiaTestController::class, 'index']) ->name('inertia.index');
+//DB保存用
+Route::post('/inertia/index', [InertiaTestController::class, 'store']) ->name('inertia.store');
+Route::get('/inertia/show/{id}', [InertiaTestController::class, 'show']) ->name('inertia.show');
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [
